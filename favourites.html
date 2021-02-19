@@ -14,20 +14,45 @@
         </script>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-        <title>Homepage</title>
+        <title>Favourites</title>
     </head>
 
     <body>
         <ion-app>
             <ion-header>
-                <ion-toolbar color="primary">
+                <ion-toolbar color="danger">
                     <ion-title>
-                      Cocktail-Something jh
-                     </ion-title>
+                        Favourites
+                    </ion-title>
                  </ion-toolbar>
-            </ion-header>    
+            </ion-header>
+            <ion-content fullscreen>
+                <ion-fab vertical="top" horizontal="start" slot="fixed">
+                    <ion-fab-button color="danger">
+                      <ion-icon name="arrow-back-circle"></ion-icon>
+                    </ion-fab-button>
+                  </ion-fab>
+                <ion-card">
+                  <ion-card-header>
+                    <ion-card-title style ="display: flex; justify-content: center;">Favourite 1</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content style ="display: flex; justify-content: center;">
+                    <img src=".\Images\placeholder.jpg" />
+                  </ion-card-content>
+                  <ion-card">
+                  <ion-card-header>
+                    <ion-card-title style ="display: flex; justify-content: center;">Favourite 2</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content style ="display: flex; justify-content: center;">
+                    <img src=".\Images\placeholder.jpg" />
+                  </ion-card-content>
+                 
+                </ion-card>
+               
+            </ion-content>    
         <ion-app>
 
     </body>
-
+    <footer>
+    </footer>
 </html>

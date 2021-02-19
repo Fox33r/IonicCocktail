@@ -14,18 +14,53 @@
         </script>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-        <title>Homepage</title>
+        <title>Cocktail List</title>
     </head>
 
     <body>
         <ion-app>
             <ion-header>
-                <ion-toolbar color="primary">
+                <ion-toolbar color="danger">
                     <ion-title>
-                      Cocktail-Something jh
-                     </ion-title>
+                    </ion-title>
                  </ion-toolbar>
-            </ion-header>    
+            </ion-header>
+            <ion-content fullscreen>
+                <ion-fab vertical="center" horizontal="start" slot="fixed">
+                    <ion-fab-button color="danger">
+                      <ion-icon name="arrow-back-circle"></ion-icon>
+                    </ion-fab-button>
+                  </ion-fab>
+                <ion-card style ="display: flex; justify-content: center;">
+                      <ion-list >
+                        <ion-item>
+                            <ion-select  id="select-output" placeholder="Choose Cocktail" ></ion-select>
+                            <ion-input id="input-cocktail-name" on-input>
+                        </ion-item>
+                      </ion-list>
+                </ion-card>
+                <ion-card>
+                  <ion-list>
+                    <ion-item>
+                        <ion-label position="floating" type="string">Enter Cocktail Name</ion-label>
+                        <ion-input id="input-cocktail-name" on-input>
+                    </ion-item>
+                  </ion-list>
+                    <ion-button id="btn-get-cocktail" color="danger" expand="block">SEARCH</ion-button>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                      <ion-card-title style ="display: flex; justify-content: center;">Favourites</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content style ="display: flex; justify-content: center;">
+                        <img src=".\Images\placeholder.jpg" />
+                      </ion-card-content>
+                      <ion-button id="btn-get-cocktail" color="danger" expand="block">FAVOURITES</ion-button>
+                </ion-card>
+                <ion-card>
+                    <ion-button id="btn-get-cocktail" color="danger" expand="block">Random Cocktail</ion-button>
+                </ion-card>
+            </ion-content>    
         <ion-app>
 
     </body>

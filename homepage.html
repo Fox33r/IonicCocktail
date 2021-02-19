@@ -14,18 +14,38 @@
         </script>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-        <title>Homepage</title>
+        <title>Cocktail List</title>
     </head>
 
     <body>
         <ion-app>
-            <ion-header>
-                <ion-toolbar color="primary">
-                    <ion-title>
-                      Cocktail-Something jh
-                     </ion-title>
+            <ion-header style ="display: flex; justify-content: center;">
+                <ion-toolbar color="danger">
+                    <ion-title >
+                        CocktailsFromHome
+                    </ion-title>
                  </ion-toolbar>
-            </ion-header>    
+            </ion-header>
+            <ion-content fullscreen>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-button id="btn-get-cocktail" color="danger" expand="block">COCKTAIL LIST</ion-button>
+                    </ion-card-header>
+                    <ion-card-content style ="display: flex; align-items: center; justify-content: center; height: 200px; width: auto;">
+                      </ion-card-content>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-button id="btn-get-cocktail" color="danger" expand="block">FAVOURITES</ion-button>
+                    </ion-card-header>
+                    <ion-card-content style ="display: flex; align-items: center; justify-content: center; height: 200px; width: auto;">
+                        
+                      </ion-card-content>
+                </ion-card>
+                <ion-card>
+                    <ion-button id="btn-get-cocktail" color="danger" expand="block">Random Cocktail</ion-button>
+                </ion-card>
+            </ion-content>    
         <ion-app>
 
     </body>
