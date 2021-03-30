@@ -1,0 +1,45 @@
+<!-- Create Page Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>Choose Your Drink</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Main Content-->
+<ion-content>
+  <!-- Return to home Button -->
+  <ion-fab vertical="center" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="navHome()" color="danger">
+      <ion-icon name="arrow-back-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card style="display: flex; justify-content: center;">
+    <ion-list>
+      <ion-item>
+        <!-- ION-SELECT to display list of cocktails-->
+        <ion-select [(ngModel)]="drink" [compareWith]="compareFn" expand="block" placeholder="Choose Cocktail">
+          <!-- FOR loop to call array from API -->
+          <ion-option *ngFor="let drink of drinkList" [value]="drink"></ion-option>
+        </ion-select>
+      </ion-item>  
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <!-- Links to Favouites Tab-->
+      <ion-card-title style ="display: flex; justify-content: center;">Favourites</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style ="display: flex; justify-content: center;">
+        <img (click)="viewFav()" src="./assets/placeholder.jpg" />
+    </ion-card-content>
+    <ion-button (click)="viewFav()" color="danger" expand="block">FAVOURITES</ion-button>
+  </ion-card>
+
+  <!-- Button to display random cocktail -->
+  <ion-card>
+    <ion-button (click)="viewDrinkRand()" color="danger" expand="block">Random Cocktail</ion-button>
+  </ion-card>
+
+</ion-content>

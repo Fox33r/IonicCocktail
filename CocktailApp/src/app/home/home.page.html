@@ -1,0 +1,37 @@
+<!-- Create Page Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      CocktailsFromHome
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Page Main Content -->
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <!-- nav to list page -->
+        <ion-button (click)="viewList()" color="danger" expand="block">COCKTAIL LIST</ion-button>
+    </ion-card-header>
+    <ion-card-content style ="display: flex; justify-content: center;">
+      <img src="./assets/placeholder.jpg" />  
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <!-- nav to favourites page -->
+        <ion-button (click)="viewFav()" color="danger" expand="block">FAVOURITES</ion-button>
+    </ion-card-header>
+    <ion-card-content style ="display: flex; justify-content: center;">
+      <img src="./assets/placeholder.jpg" />
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <!-- button to display random cocktail -->
+    <ion-button (click)="viewDrinkRand()" color="danger" expand="block">Random Cocktail</ion-button>
+  </ion-card>
+
+</ion-content>

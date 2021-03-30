@@ -27,7 +27,7 @@
             </ion-header>
             <ion-content fullscreen>
                 <ion-fab vertical="top" horizontal="start" slot="fixed">
-                    <ion-fab-button color="danger">
+                    <ion-fab-button (click)="home()" color="danger">
                       <ion-icon name="arrow-back-circle"></ion-icon>
                     </ion-fab-button>
                   </ion-fab>
@@ -52,7 +52,7 @@
                   </ion-card-content>
                 </ion-card>
                 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                    <ion-fab-button color="warning">
+                    <ion-fab-button (click)="viewFav()" color="warning">
                       <ion-icon name="star"></ion-icon>
                     </ion-fab-button>
                 </ion-fab>

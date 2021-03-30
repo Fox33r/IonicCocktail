@@ -1,0 +1,27 @@
+<!-- Create Page Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>Favourites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Main Content -->
+<ion-content>
+  <!-- Button - return to home-page -->
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="navHome()" color="danger">
+      <ion-icon name="arrow-back-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- Display list of users favourtie cocktails -->
+  <ion-card> <!-- '*ngFOR="let fav of favourites"' - can be used to create a card for each favouite added to array -->
+    <ion-card-header>
+      <ion-card-title style ="display: flex; justify-content: center;">Favourite 1</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style ="display: flex; justify-content: center;">
+      <img (click)="viewFav()" src=".\assets\placeholder.jpg" />
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

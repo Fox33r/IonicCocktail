@@ -1,0 +1,47 @@
+<!-- Create Page Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>How To</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Main Content -->
+<ion-content>
+  <!-- Return to Home Button -->
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="navHome()" color="danger">
+      <ion-icon name="arrow-back-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- Run for loop to return values from API -->
+  <ion-card *ngFor="let rand of randomDrink">
+    <ion-card>
+      <ion-card-header style="display: flex; justify-content: center;">
+        <!-- fill with data from API-->
+        <ion-card-title>{{rand.strDrink}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content style="display: flex; justify-content: center;">
+        <!-- fill with data from API-->
+        <img src="{{rand.strDrinkThumb}}">
+      </ion-card-content>
+      <ion-card-subtitle style="display: flex; justify-content: center;">
+          Ingredients
+      </ion-card-subtitle>
+      <!-- fill with data from API-->
+      <ion-card-content>{{rand.strIngredient1}},{{rand.strIngredient2}},{{rand.strIngredient3}},{{rand.strIngredient4}},{{rand.strIngredient5}},{{rand.strIngredient6}},{{rand.strIngredient7}}</ion-card-content>
+      <ion-card-subtitle style="display: flex; justify-content: center;">
+          Method
+      </ion-card-subtitle>
+      <!-- fill with data from API-->
+      <ion-card-content>{{rand.strInstructions}}</ion-card-content>
+    </ion-card>
+  </ion-card>
+
+  <!-- Add drink to favourites list -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="viewFav()" color="warning">
+      <ion-icon name="star"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
